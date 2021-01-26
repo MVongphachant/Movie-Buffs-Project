@@ -120,5 +120,8 @@
       }
     }
   },
-  "defaultProject": "movie-buffs-project"
+  "defaultProject": "movie-buffs-project",
+  "cli": {
+    "analytics": "392931b4-ac2b-48b1-80e0-d73a430225ac"
+  }
 }

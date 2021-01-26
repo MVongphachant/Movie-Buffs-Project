@@ -1,0 +1,14 @@
+.poster-image {
+    height: 300px;
+    width: 200px;
+    margin: 10px;
+}
+
+.container {
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.wrapper{
+    width: 350px;
+}
