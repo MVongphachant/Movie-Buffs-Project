@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Movie } from '../models/movie.model';
+import { ApiService } from '../services/api.service';
 
 @Component({
   selector: 'app-movie-detail',
@@ -11,14 +12,16 @@ export class MovieDetailComponent implements OnInit {
   movie: Movie;
 
 
-  constructor(private route: ActivatedRoute, private router: Router) { }
+  constructor(private route: ActivatedRoute, 
+              private router: Router,
+              private api: ApiService) { }
 
   ngOnInit() {
     this.movie = {
       id: this.route.snapshot.params['id'],
       title: this.route.snapshot.params['title'],
       releaseDate: this.route.snapshot.params['release-date'],
-      posterPath: this.route.snapshot.params['poster-path'],
+      posterPath: this.api.posterPathUrl + this.route.snapshot.params['poster-path'],
       rating: this.route.snapshot.params['rating']
     }
   }

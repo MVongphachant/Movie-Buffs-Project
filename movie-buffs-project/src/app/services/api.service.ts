@@ -12,7 +12,7 @@ export class ApiService {
 
   popularityApiUrl = 'https://api.themoviedb.org/3/discover/movie?api_key=62c905dcaaa47382b2e1dad50f3a73e3';
   theaterApiUrl = 'https://api.themoviedb.org/3/discover/movie?api_key=62c905dcaaa47382b2e1dad50f3a73e3';
-
+  posterPathUrl = 'https://image.tmdb.org/t/p/original/';
   // primary_release_date.gte=2014-09-15&primary_release_date.lte=2014-10-22
 
 
