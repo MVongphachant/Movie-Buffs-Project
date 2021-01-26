@@ -9,6 +9,7 @@ import { WatchlistPageComponent } from './watchlist-page/watchlist-page.componen
 import { HttpClientModule } from '@angular/common/http';
 import { HomePageComponent } from './home-page/home-page.component';
 import { MovieDetailComponent } from './movie-detail/movie-detail.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { MovieDetailComponent } from './movie-detail/movie-detail.component';
     MovieListComponent,
     WatchlistPageComponent,
     HomePageComponent,
-    MovieDetailComponent
+    MovieDetailComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
