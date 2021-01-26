@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Movie } from '../models/movie.model';
+import { ApiService } from '../services/api.service';
 
 @Component({
   selector: 'app-movie-list',
@@ -6,10 +8,28 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./movie-list.component.css']
 })
 export class MovieListComponent implements OnInit {
+  movies: Movie[] = [];
 
-  constructor() { }
+  constructor(private api: ApiService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.movies = this.api.movies;
+  }
+
+  onPageUpMost() {
+    this.api.pageUpMostPopResults();
+  }
+
+  onPageDownMost() {
+    this.api.pageDownMostPopResults();
+  }
+
+  onPageUpLeast() {
+    this.api.pageUpLeastPopResults();
+  }
+
+  onPageDownLeast() {
+    this.api.pageDownLeastPopResults();
   }
 
 }

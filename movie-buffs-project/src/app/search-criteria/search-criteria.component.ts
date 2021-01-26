@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../services/api.service';
 
 @Component({
   selector: 'app-search-criteria',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchCriteriaComponent implements OnInit {
 
-  constructor() { }
+  constructor(private api: ApiService) { }
 
   ngOnInit(): void {
+  }
+
+  onGetMostPop() {
+    this.api.getMostPopResults();
+  }
+
+  onGetLeastPop() {
+    this.api.getLeastPopResults();
   }
 
 }
