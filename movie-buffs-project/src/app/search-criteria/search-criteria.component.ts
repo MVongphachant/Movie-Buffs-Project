@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Movie } from '../models/movies';
 import { ApiService } from '../services/api.service';
+import { MoviesService } from '../services/movies.service';
 
 @Component({
   selector: 'app-search-criteria',
@@ -8,7 +10,10 @@ import { ApiService } from '../services/api.service';
 })
 export class SearchCriteriaComponent implements OnInit {
 
-  constructor(private api: ApiService) { }
+  movies: Movie[] = [];
+
+  constructor(private api: ApiService,
+    private moviesService: MoviesService) { }
 
   ngOnInit(): void {
   }
@@ -19,6 +24,18 @@ export class SearchCriteriaComponent implements OnInit {
 
   onGetLeastPop() {
     this.api.getLeastPopResults();
+  }
+
+  getMovies(data: any) {
+    return this.movies = data.results;
+      // console.log(this.movies);
+  }
+
+  showMovies(query: string) {
+    console.log(query)
+    this.moviesService.getData(query).subscribe((data: any) => {
+      this.getMovies(data);
+    })
   }
 
 }

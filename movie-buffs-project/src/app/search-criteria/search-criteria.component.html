@@ -1,3 +1,16 @@
+<div>
+    <input type="text" placeholder="Enter Title Here" #query>
+    <button (click)="showMovies(query.value)" >Show Movies</button>
+    <div class="container">
+        <div *ngFor="let movie of movies">
+            <div class="wrapper">
+                <div>{{movie.title}}</div>
+                <img class="poster-image"
+                src="https://image.tmdb.org/t/p/w1280{{ movie.poster_path }}"alt="movie-poster-picture"/>
+            </div>
+        </div>
+    </div>
+</div>
 <h3>Search by Popularity</h3>
 <button (click)="onGetMostPop()">Most Popular</button>
 <button (click)="onGetLeastPop()">Least Popular</button>
