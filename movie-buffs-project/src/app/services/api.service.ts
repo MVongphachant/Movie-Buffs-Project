@@ -11,6 +11,10 @@ export class ApiService {
   pageCounter: number = 1;
 
   popularityApiUrl = 'https://api.themoviedb.org/3/discover/movie?api_key=62c905dcaaa47382b2e1dad50f3a73e3';
+  theaterApiUrl = 'https://api.themoviedb.org/3/discover/movie?api_key=62c905dcaaa47382b2e1dad50f3a73e3';
+
+  // primary_release_date.gte=2014-09-15&primary_release_date.lte=2014-10-22
+
 
 
   constructor(private http: HttpClient) { }
@@ -39,9 +43,34 @@ export class ApiService {
       })
   }
 
+  //Will not push data to HTML?
+  getTheaterResults() {
+    this.clearMovies()
+    return this.http.get(`${this.theaterApiUrl}&sort_by=release_date.desc`).pipe(map(responseData => {
+      let responseArray = [];
+      for (let i in responseData) {
+        responseArray.push(responseData[i])
+      }
+      responseArray = responseArray[1];
+      return responseArray;
+    }))
+      .subscribe(data => {
+        data.forEach(object => {
+          const movieObj = {
+            id: object.id, 
+            title: object.title,
+            releaseDate: object.release_date,
+            posterPath: object.poster_path,
+            rating: object.vote_average
+          };
+          this.movies.push(movieObj);
+        })
+      })
+  }
+
   getLeastPopResults() {
     this.clearMovies();
-    return this.http.get(`${this.popularityApiUrl}&sort_by=popularity.asc`).pipe(map(responseData => {
+    return this.http.get(`${this.popularityApiUrl}&primary_release_date.gte=2014-09-15&primary_release_date.lte=2014-10-22`).pipe(map(responseData => {
       const responseArray = [];
       for (let i in responseData) {
         responseArray.push(responseData[i])

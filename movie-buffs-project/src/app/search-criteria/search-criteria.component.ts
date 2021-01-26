@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Movie } from '../models/movies';
+import { MovieSearch } from '../models/movies';
 import { ApiService } from '../services/api.service';
 import { MoviesService } from '../services/movies.service';
 
@@ -10,16 +10,12 @@ import { MoviesService } from '../services/movies.service';
 })
 export class SearchCriteriaComponent implements OnInit {
 
-  movies: Movie[] = [];
+  movies: MovieSearch[] = [];
 
   constructor(private api: ApiService,
     private moviesService: MoviesService) { }
 
   ngOnInit(): void {
-  }
-
-  onGetMostPop() {
-    this.api.getMostPopResults();
   }
 
   onGetLeastPop() {

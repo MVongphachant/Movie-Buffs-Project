@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../services/api.service';
-import { MoviesService } from '../services/movies.service';
 
 @Component({
   selector: 'app-footer',
@@ -9,8 +8,7 @@ import { MoviesService } from '../services/movies.service';
 })
 export class FooterComponent implements OnInit {
 
-  constructor(private api: ApiService,
-    private moviesService: MoviesService) { }
+  constructor(private api: ApiService) { }
 
   ngOnInit(): void {
   }
@@ -18,5 +16,7 @@ export class FooterComponent implements OnInit {
   onGetMostPop() {
     this.api.getMostPopResults();
   }
-
+  onGetTheaters() {
+    this.api.getTheaterResults();
+  }
 }
