@@ -1,0 +1,12 @@
+.footer-container {
+    display: flex;
+}
+.popular-container{
+    display:flex;
+    text-align: center;
+    justify-content: center;
+}
+#popular-button{
+    display: flex;
+    justify-content: center;
+}
