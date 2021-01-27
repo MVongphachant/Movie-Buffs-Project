@@ -18,20 +18,20 @@ export class MovieListComponent implements OnInit {
     this.movies = this.api.movies;
   }
 
-  onPageUpMost() {
-    this.api.pageUpMostPopResults();
-  }
+  // onPageUpMost() {
+  //   this.api.pageUpMostPopResults();
+  // }
 
-  onPageDownMost() {
-    this.api.pageDownMostPopResults();
-  }
+  // onPageDownMost() {
+  //   this.api.pageDownMostPopResults();
+  // }
 
-  onPageUpLeast() {
-    this.api.pageUpLeastPopResults();
-  }
+  // onPageUpLeast() {
+  //   this.api.pageUpLeastPopResults();
+  // }
 
-  onPageDownLeast() {
-    this.api.pageDownLeastPopResults();
-  }
+  // onPageDownLeast() {
+  //   this.api.pageDownLeastPopResults();
+  // }
 
 }

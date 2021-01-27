@@ -19,6 +19,8 @@ export class HomePageComponent implements OnInit {
     this.movies = this.api.movies;
   }
 
+  
+
   // onPageUpMost() {
   //   this.api.pageUpMostPopResults();
   // }
