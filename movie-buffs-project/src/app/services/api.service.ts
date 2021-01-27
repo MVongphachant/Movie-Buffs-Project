@@ -46,7 +46,7 @@ export class ApiService {
   //Will not push data to HTML?
   getTheaterResults() {
     this.clearMovies()
-    return this.http.get(`${this.theaterApiUrl}&sort_by=release_date.desc`).pipe(map(responseData => {
+    return this.http.get(`${this.theaterApiUrl}&sort_by=release_date.desc=`).pipe(map(responseData => {
       let responseArray = [];
       for (let i in responseData) {
         responseArray.push(responseData[i])
