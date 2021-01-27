@@ -1,1 +1,16 @@
-<p>watchlist-page works!</p>
+<!-- <p>watchlist-page works!</p> -->
+
+<div style="display:flex;">
+    <h1>Watchlist</h1>
+    <div *ngFor="let movie of watchlist" class="movie">
+        <div class="wrapper">
+
+            <div>{{movie.title}}</div>
+
+            <img class="poster-image"
+            src="https://image.tmdb.org/t/p/w1280{{ movie.poster_path }}" alt="movie-poster-picture"/>
+
+            <button (click)="removeMovie(movie)">Remove</button>
+        </div>
+    </div>
+</div>

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Movie } from '../models/movie.model';
 import { ApiService } from '../services/api.service';
 import { MoviesService } from '../services/movies.service';
+import { WatchlistService } from '../services/watchlist.service'
 
 @Component({
   selector: 'app-movie-list',
@@ -12,7 +13,7 @@ export class MovieListComponent implements OnInit {
   movies: Movie[] = [];
 
   constructor(private api: ApiService,
-              private moviesService: MoviesService) { }
+              private moviesService: MoviesService, private watchlistService: WatchlistService) { }
 
   ngOnInit() {
     this.movies = this.api.movies;
@@ -32,6 +33,10 @@ export class MovieListComponent implements OnInit {
 
   onPageDownLeast() {
     this.api.pageDownLeastPopResults();
+  }
+
+  addMovie(movie){
+    this.watchlistService.addMovie(movie)
   }
 
   

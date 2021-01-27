@@ -10,6 +10,8 @@
             <a [routerLink]="['/movie-detail', movie.id, movie.title, movie.releaseDate, movie.posterPath, movie.rating]">
                 <h3>{{movie.title}}</h3>
             <!-- <h4>{{movie.id}} </h4> -->
+            <button (click)="addMovie(movie)">Add to my list</button>
+            
             </a>
         </li>
     </ul>

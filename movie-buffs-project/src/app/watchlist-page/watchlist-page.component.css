@@ -1,0 +1,14 @@
+.poster-image {
+    height: 150px;
+    width: 110px;
+}
+
+h1 {
+    position: relative;
+    text-align: center;
+    align-self: start;
+}
+
+.wrapper {
+    margin: 10px;
+}
