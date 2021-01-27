@@ -34,6 +34,4 @@ export class MovieListComponent implements OnInit {
     this.api.pageDownLeastPopResults();
   }
 
-  
-
 }

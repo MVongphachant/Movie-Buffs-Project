@@ -1,3 +1,16 @@
 <app-search-criteria></app-search-criteria>
-<app-movie-list></app-movie-list>
+<!-- <app-movie-list></app-movie-list> -->
+<div>
+    Text for popular or in theaters need to switch
+    </div>
+    <div class="pop-theater-container" *ngIf="movies">
+            <div *ngFor="let movie of movies">
+                <a [routerLink]="['/movie-detail', movie.id, movie.title, movie.releaseDate, movie.posterPath, movie.rating]">
+                    <img class="poster-image-pop-theater"
+                    src="https://image.tmdb.org/t/p/original{{ movie.posterPath }}"alt="movie-poster-picture"/>
+                    <!-- <div class="individual-movie"><h3>{{movie.title}}</h3></div> -->
+                <!-- <h4>{{movie.id}} </h4> -->
+                </a>
+            </div>
+    </div>
 <app-footer></app-footer>
