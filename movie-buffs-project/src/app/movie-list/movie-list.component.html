@@ -1,16 +1,16 @@
-<hr>
-<button (click)="onPageUpMost()">Page up</button>
+<!-- <hr> -->
+<!-- <button (click)="onPageUpMost()">Page up</button>
 <button (click)="onPageDownMost()">Page down</button>
 <hr>
 <button (click)="onPageUpLeast()">Page up</button>
-<button (click)="onPageDownLeast()">Page down</button>
-<div *ngIf="movies">
-    <ul>
-        <li *ngFor="let movie of movies">
+<button (click)="onPageDownLeast()">Page down</button> -->
+<div class="pop-theater-container" *ngIf="movies">
+        <div *ngFor="let movie of movies">
             <a [routerLink]="['/movie-detail', movie.id, movie.title, movie.releaseDate, movie.posterPath, movie.rating]">
-                <h3>{{movie.title}}</h3>
+                <img class="poster-image-pop-theater"
+                src="https://image.tmdb.org/t/p/original{{ movie.posterPath }}"alt="movie-poster-picture"/>
+                <!-- <div class="individual-movie"><h3>{{movie.title}}</h3></div> -->
             <!-- <h4>{{movie.id}} </h4> -->
             </a>
-        </li>
-    </ul>
+        </div>
 </div>

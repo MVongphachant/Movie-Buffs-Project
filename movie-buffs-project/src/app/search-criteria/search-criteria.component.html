@@ -1,6 +1,6 @@
 <div>
     <input type="text" placeholder="Enter Title Here" #query>
-    <button (click)="showMovies(query.value)" >Show Movies</button>
+    <div><button (click)="showMovies(query.value)" >Show Movies</button></div>
     <div class="container">
         <div *ngFor="let movie of movies">
             <div class="wrapper">
@@ -11,6 +11,6 @@
         </div>
     </div>
 </div>
-<h3>Search by Popularity</h3>
-<button (click)="onGetLeastPop()">Least Popular</button>
+<!-- <h3>Search by Popularity</h3>
+<button (click)="onGetLeastPop()">Least Popular</button> -->
 

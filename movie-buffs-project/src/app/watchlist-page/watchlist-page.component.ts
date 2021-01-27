@@ -12,4 +12,6 @@ export class WatchlistPageComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  
+
 }
