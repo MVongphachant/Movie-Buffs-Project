@@ -13,7 +13,9 @@ export class ApiService {
   popularityApiUrl = 'https://api.themoviedb.org/3/discover/movie?api_key=62c905dcaaa47382b2e1dad50f3a73e3';
   theaterApiUrl = 'https://api.themoviedb.org/3/discover/movie?api_key=62c905dcaaa47382b2e1dad50f3a73e3';
   posterPathUrl = 'https://image.tmdb.org/t/p/original/';
-  // primary_release_date.gte=2014-09-15&primary_release_date.lte=2014-10-22
+
+  //this autimatically updates but i cant get it to push
+  // theaterApiUrl = 'https://api.themoviedb.org/3/movie/now_playing?api_key=62c905dcaaa47382b2e1dad50f3a73e3&';
 
 
 
@@ -46,7 +48,7 @@ export class ApiService {
   //Will not push data to HTML?
   getTheaterResults() {
     this.clearMovies()
-    return this.http.get(`${this.theaterApiUrl}&sort_by=release_date.desc=`).pipe(map(responseData => {
+    return this.http.get(`${this.theaterApiUrl}&sort_by=release_date.desc&sort_by=popularity.desc`).pipe(map(responseData => {
       let responseArray = [];
       for (let i in responseData) {
         responseArray.push(responseData[i])
