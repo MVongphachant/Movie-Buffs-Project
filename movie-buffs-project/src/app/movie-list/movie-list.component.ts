@@ -17,6 +17,7 @@ export class MovieListComponent implements OnInit {
               private moviesService: MoviesService, private watchlistService: WatchlistService) { }
 
   ngOnInit() {
+<<<<<<< HEAD
     // this.movies = this.api.movies;
     this.moviesService.setMovieSearch.subscribe(data => this.movieSearch = data)
   }
@@ -24,6 +25,13 @@ export class MovieListComponent implements OnInit {
   addMovie(movie){
     this.watchlistService.addMovie(movie)
   }
+=======
+    this.movies = this.api.movies;
+      this.api.getMostPopResults();
+  
+  }
+  
+>>>>>>> maddystyle
 
 
 }
