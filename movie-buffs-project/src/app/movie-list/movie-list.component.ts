@@ -11,15 +11,21 @@ import { WatchlistService } from '../services/watchlist.service'
 })
 export class MovieListComponent implements OnInit {
   movies: Movie[] = [];
+  movieSearch = [];
 
   constructor(private api: ApiService,
               private moviesService: MoviesService, private watchlistService: WatchlistService) { }
 
   ngOnInit() {
     this.movies = this.api.movies;
+    this.moviesService.movieSearch.subscribe(data => {
+      this.moviesService.getData(data).subscribe(movieArray => this.movieSearch = movieArray.results)
+    })
   }
 
-  
+  addMovie(movie){
+    this.watchlistService.addMovie(movie)
+  }
 
 
 }

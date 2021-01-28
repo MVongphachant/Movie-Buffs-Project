@@ -1,12 +1,13 @@
 <app-search-criteria></app-search-criteria>
-<app-movie-list></app-movie-list>
-    <div class="pop-theater-container" *ngIf="movies">
-            <div *ngFor="let movie of movies">
-                <a [routerLink]="['/movie-detail', movie.title, movie.posterPath, movie.rating, movie.overview]">
-                    <img class="poster-image-pop-theater"
-                    src="https://image.tmdb.org/t/p/original{{ movie.posterPath }}"alt="movie-poster-picture"/>
-                </a>
-                <button (click)="addMovie(movie)">Add to my list</button>
-            </div>
+<!-- <app-movie-list></app-movie-list> -->
+             
+<div class="pop-theater-container" *ngIf="movies">
+    <div *ngFor="let movie of movies">
+        <a [routerLink]="['/movie-detail', movie.title, movie.posterPath, movie.rating, movie.overview]">
+            <img class="poster-image-pop-theater"
+            src="https://image.tmdb.org/t/p/original{{ movie.posterPath }}"alt="movie-poster-picture"/>
+        </a>
+        <button (click)="addMovie(movie)">Add to my list</button>
     </div>
+</div>
 <app-footer></app-footer>

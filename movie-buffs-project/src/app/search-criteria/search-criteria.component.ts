@@ -25,10 +25,7 @@ export class SearchCriteriaComponent implements OnInit {
   }
 
   showMovies(query: string) {
-    console.log(query)
-    this.moviesService.getData(query).subscribe((data: any) => {
-      this.getMovies(data);
-    })
+    return this.moviesService.movieSearch.emit(query);
   }
 
   addMovie(movie){

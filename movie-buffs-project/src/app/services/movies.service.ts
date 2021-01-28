@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { MovieSearch } from '../models/movies';
@@ -14,7 +14,7 @@ export class MoviesService {
   movies: MovieSearch[] = [];
   apiKey: string = "eff49dddff24c084d86e79143ec6ccd7"
   apiURL: string ="https://api.themoviedb.org/3/search/movie"
-
+  movieSearch = new EventEmitter();
   constructor(private http: HttpClient) { }
 
   getData(title: string): Observable<any> {
