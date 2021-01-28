@@ -11,6 +11,7 @@ import { ApiService } from '../services/api.service';
 export class MovieDetailComponent implements OnInit {
   movie: Movie;
 
+starWidthStyle: string = "";
 
   constructor(private route: ActivatedRoute, 
               private router: Router,
@@ -25,7 +26,15 @@ export class MovieDetailComponent implements OnInit {
       rating: this.route.snapshot.params['rating'],
       overview: this.route.snapshot.params['overview']
     }
-  }
+    
+    const starTotal = 5;
+    const starPercentage = (this.movie.rating / 2 / starTotal) * 100;
+    const starPercentageRounded = `${(Math.round(starPercentage / 10) * 10)}%`;
+    this.starWidthStyle = `width: ${starPercentageRounded}`
+    console.log(starPercentageRounded)
+    // document.querySelector(`.${rating} .stars-inner`).style.width = starPercentageRounded; 
+}
+
 
   onCloseDetails() {
     this.router.navigate(['/'])
