@@ -1,7 +1,7 @@
 <app-search-criteria></app-search-criteria>
 <!-- <app-movie-list></app-movie-list> -->
              
-<div class="pop-theater-container" *ngIf="movies">
+<div class="pop-theater-container" >
     <div *ngFor="let movie of movies">
         <a [routerLink]="['/movie-detail', movie.title, movie.posterPath, movie.rating, movie.overview]">
             <img class="poster-image-pop-theater"

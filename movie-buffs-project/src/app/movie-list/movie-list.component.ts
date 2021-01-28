@@ -21,6 +21,7 @@ export class MovieListComponent implements OnInit {
     this.moviesService.movieSearch.subscribe(data => {
       this.moviesService.getData(data).subscribe(movieArray => this.movieSearch = movieArray.results)
     })
+    console.log(this.movieSearch)
   }
 
   addMovie(movie){
