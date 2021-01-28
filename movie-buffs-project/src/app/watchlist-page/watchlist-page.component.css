@@ -5,10 +5,23 @@
 
 h1 {
     position: relative;
-    text-align: center;
-    align-self: start;
+
 }
 
 .wrapper {
     margin: 10px;
+}
+
+.active {
+    font-size: 30px;
+    border: none;
+    background-color: white;
+    position: relative;
+}
+
+button {
+    font-size: 20px;
+    border: none;
+    background-color: white;
+    position: relative;
 }
