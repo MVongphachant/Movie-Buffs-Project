@@ -1,6 +1,6 @@
 <div>
     <input type="text" placeholder="Enter Title Here" #query>
-    <button [routerLink]="['/']" (click)="showMovies(query.value)" >Show Movies</button>
+    <button  (click)="showMovies(query.value)" [routerLink]="['/movie-list']">Show Movies</button>
     
 </div>
 <!-- <h3>Search by Popularity</h3>

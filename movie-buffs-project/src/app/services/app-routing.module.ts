@@ -5,8 +5,7 @@ import { WatchlistPageComponent } from '../watchlist-page/watchlist-page.compone
 
 
 const routes: Routes = [
-  { path: "",  component: MovieListComponent,}, 
-  { path: "watchlist", component: WatchlistPageComponent}
+  
 ];
 
 

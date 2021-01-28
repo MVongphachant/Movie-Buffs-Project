@@ -14,7 +14,7 @@ export class MoviesService {
   movies: MovieSearch[] = [];
   apiKey: string = "eff49dddff24c084d86e79143ec6ccd7"
   apiURL: string ="https://api.themoviedb.org/3/search/movie"
-  movieSearch = new EventEmitter<MovieSearch[]>();
+  setMovieSearch = new EventEmitter<MovieSearch[]>();
   constructor(private http: HttpClient) { }
 
   getData(title: string): Observable<any> {
