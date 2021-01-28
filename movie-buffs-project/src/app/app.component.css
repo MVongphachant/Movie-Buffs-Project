@@ -1,9 +1,12 @@
 .header-container{
     display: flex;
     justify-content: center;
+    margin: 0px;
+    padding: 0px;
 }
 
 .welcome-message{
     display:flex;
     justify-content: center;
+    margin: 0px;
 }
