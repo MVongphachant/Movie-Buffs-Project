@@ -17,7 +17,7 @@ export class MovieListComponent implements OnInit {
               private moviesService: MoviesService, private watchlistService: WatchlistService) { }
 
   ngOnInit() {
-    this.movies = this.api.movies;
+    // this.movies = this.api.movies;
     this.moviesService.movieSearch.subscribe(data => console.log(data))
   }
 
