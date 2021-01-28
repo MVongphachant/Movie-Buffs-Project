@@ -15,3 +15,10 @@
     height:250px;
     width:150px;
 }
+
+button {
+    font-size: 20px;
+    border: none;
+    background-color: white;
+    position: relative;
+}
