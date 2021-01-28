@@ -19,4 +19,7 @@ export class FooterComponent implements OnInit {
   onGetTheaters() {
     this.api.getTheaterResults();
   }
+
+
+
 }

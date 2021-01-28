@@ -1,18 +1,2 @@
-<hr>
-<button (click)="onPageUpMost()">Page up</button>
-<button (click)="onPageDownMost()">Page down</button>
-<hr>
-<button (click)="onPageUpLeast()">Page up</button>
-<button (click)="onPageDownLeast()">Page down</button>
-<div *ngIf="movies">
-    <ul>
-        <li *ngFor="let movie of movies">
-            <a [routerLink]="['/movie-detail', movie.id, movie.title, movie.releaseDate, movie.posterPath, movie.rating]">
-                <h3>{{movie.title}}</h3>
-            <!-- <h4>{{movie.id}} </h4> -->
-            <button (click)="addMovie(movie)">Add to my list</button>
+
             
-            </a>
-        </li>
-    </ul>
-</div>

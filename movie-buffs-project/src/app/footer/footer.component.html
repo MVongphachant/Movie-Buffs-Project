@@ -1,11 +1,15 @@
 <div class="footer-container">
-    <div class="popuar-container">
-        <i id="popular-button" class="fas fa-star" (click)="onGetMostPop()"></i>
+    <div class="popular-container">
+        <i id="popular-button" class="fas fa-star fa-3x" (click)="onGetMostPop()"></i>
         <div class="popular-title">Popular</div>
     </div>
     <div class="in-theaters-container">
-        <i class="fas fa-film"(click)="onGetTheaters()"></i>
+        <i id="theater-button" class="fas fa-film fa-3x" (click)="onGetTheaters()"></i>
         <div class="in-theaters-title">In Theaters</div>
+    </div>
+    <div class="favorite-container">
+        <i routerLink="/watchlist-page" routerLinkActive="active" id="favorites-button" class="fas fa-heart fa-3x"></i>
+        <div class="favorite-title">Favorites</div>
     </div>
 </div>
 

@@ -19,10 +19,6 @@ export class SearchCriteriaComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onGetLeastPop() {
-    this.api.getLeastPopResults();
-  }
-
   getMovies(data: any) {
     return this.movies = data.results;
       // console.log(this.movies);
