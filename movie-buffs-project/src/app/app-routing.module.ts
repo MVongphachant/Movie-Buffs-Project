@@ -5,7 +5,7 @@ import { MovieDetailComponent } from './movie-detail/movie-detail.component';
 import { WatchlistPageComponent } from './watchlist-page/watchlist-page.component';
 
 const routes: Routes = [
-  {path: 'movie-detail/:id/:title/:release-date/:poster-path/:rating', component: MovieDetailComponent},
+  {path: 'movie-detail/:title/:poster-path/:rating', component: MovieDetailComponent},
   {path: 'watchlist-page', component: WatchlistPageComponent},
   {path: '', component: HomePageComponent},
 ];
