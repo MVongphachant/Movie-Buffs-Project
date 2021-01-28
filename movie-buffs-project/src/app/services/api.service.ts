@@ -11,7 +11,7 @@ export class ApiService {
   pageCounter: number = 1;
 
   popularityApiUrl = 'https://api.themoviedb.org/3/discover/movie?api_key=62c905dcaaa47382b2e1dad50f3a73e3';
-  theaterApiUrl = 'https://api.themoviedb.org/3/discover/movie?api_key=62c905dcaaa47382b2e1dad50f3a73e3';
+  theaterApiUrl = 'https://api.themoviedb.org/3/movie/now_playing?api_key=62c905dcaaa47382b2e1dad50f3a73e3&page=1&region=US';
   posterPathUrl = 'https://image.tmdb.org/t/p/original/';
 
   //this autimatically updates but i cant get it to push
@@ -52,12 +52,12 @@ export class ApiService {
   //Will not push data to HTML?
   getTheaterResults() {
     this.clearMovies()
-    return this.http.get(`${this.theaterApiUrl}&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&primary_release_date.gte=2020-12-15&primary_release_date.lte=2021-01-27`).pipe(map(responseData => {
+    return this.http.get(`${this.theaterApiUrl}`).pipe(map(responseData => {
       let responseArray = [];
       for (let i in responseData) {
         responseArray.push(responseData[i])
       }
-      responseArray = responseArray[1];
+      responseArray = responseArray[2];
       return responseArray;
     }))
       .subscribe(data => {
