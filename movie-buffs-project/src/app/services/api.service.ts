@@ -42,7 +42,8 @@ export class ApiService {
             title: object.title,
             releaseDate: object.release_date,
             posterPath: object.poster_path,
-            rating: object.vote_average
+            rating: object.vote_average,
+            overview: object.overview
           };
           this.movies.push(movieObj);
         })
@@ -67,7 +68,8 @@ export class ApiService {
             title: object.title,
             releaseDate: object.release_date,
             posterPath: object.poster_path,
-            rating: object.vote_average
+            rating: object.vote_average,
+            overview: object.overview
           };
           this.movies.push(movieObj);
         })

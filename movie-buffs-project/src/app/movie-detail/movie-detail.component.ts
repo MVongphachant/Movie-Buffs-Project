@@ -22,7 +22,8 @@ export class MovieDetailComponent implements OnInit {
       title: this.route.snapshot.params['title'],
       releaseDate: this.route.snapshot.params['release-date'],
       posterPath: this.api.posterPathUrl + this.route.snapshot.params['poster-path'],
-      rating: this.route.snapshot.params['rating']
+      rating: this.route.snapshot.params['rating'],
+      overview: this.route.snapshot.params['overview']
     }
   }
 
