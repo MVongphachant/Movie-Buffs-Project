@@ -34,5 +34,6 @@ export class SearchCriteriaComponent implements OnInit {
   addMovie(movie){
     this.watchlistService.addMovie(movie)
   }
+  
 
 }

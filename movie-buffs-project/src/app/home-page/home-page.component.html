@@ -6,7 +6,9 @@
                     <img class="poster-image-pop-theater"
                     src="https://image.tmdb.org/t/p/original{{ movie.posterPath }}"alt="movie-poster-picture"/>
                 </a>
-                <button (click)="addMovie(movie)">Add to my list</button>
+                <div class="add-favorites-button">
+                    <button (click)="addMovie(movie)">Add to my list</button>
+                </div>
             </div>
     </div>
 <app-footer></app-footer>

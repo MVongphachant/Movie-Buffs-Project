@@ -17,8 +17,9 @@ export class MovieListComponent implements OnInit {
 
   ngOnInit() {
     this.movies = this.api.movies;
+      this.api.getMostPopResults();
+  
   }
-
   
 
 
