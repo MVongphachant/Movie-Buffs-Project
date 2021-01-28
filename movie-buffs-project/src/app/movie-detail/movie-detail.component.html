@@ -1,6 +1,11 @@
-<img [src]="movie.posterPath" alt="">
-<div>{{movie.title}} </div>
-<div>{{movie.releaseDate}}</div>
-<div>{{movie.rating}}</div>
-<div>{{movie.overview}}</div>
-<button (click)="onCloseDetails()">Close Details</button>
+<div class="container">
+    <h1>{{movie.title}}</h1>
+    <div class="star-container">
+        <div class="stars-outer">
+            <div class="stars-inner" [style]="starWidthStyle"></div>
+        </div>
+    </div>
+    <img [src]="movie.posterPath" alt="">
+    <div>{{movie.overview}}</div>
+    <button (click)="onCloseDetails()">Close Details</button>
+</div>
