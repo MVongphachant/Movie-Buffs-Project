@@ -3,11 +3,16 @@
     <div class="pop-theater-container" *ngIf="movies">
             <div *ngFor="let movie of movies">
                 <a [routerLink]="['/movie-detail', movie.title, movie.posterPath, movie.rating, movie.overview]">
-                    <img class="poster-image-pop-theater"
+                    <img *ngIf="movie.posterPath" class="poster-image-pop-theater"
                     src="https://image.tmdb.org/t/p/original{{ movie.posterPath }}"alt="movie-poster-picture"/>
+                    <img
+                    *ngIf="!movie.posterPath"
+                    src="/src/app/assets/No-Photo-Available.png"
+                    alt="no-image"
+                  />
                 </a>
                 <div class="add-favorites-button">
-                    <button (click)="addMovie(movie)"><i class="fas fa-heart"></i></button>
+                    <i  (click)="addMovie(movie)" class="fas fa-heart"></i>
                 </div>
             </div>
     </div>

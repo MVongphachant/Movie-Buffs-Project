@@ -7,13 +7,24 @@
 .search-container {
     display:flex;
     justify-content: center;
+    align-items: center;
+    background-color: #78290F;
+}
+.title-search-input{
+    height:20px;
+    border-radius: 5px;
+    border:none;
 }
 
 .search-button {
-    margin: 0 5px 0 5px; 
+    margin: 5px;
     height: 30px;
     border-radius: 5px;
     border: none;
     background-color: #15616D;
     color:white
+}
+
+.search-button:hover {
+    background-color: #ff7d00;
 }

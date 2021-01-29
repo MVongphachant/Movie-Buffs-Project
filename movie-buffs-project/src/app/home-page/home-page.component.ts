@@ -25,6 +25,15 @@ export class HomePageComponent implements OnInit {
   addMovie(movie){
     this.watchlist.addMovie(movie)
   }
+
+//trying to toggle the color of the favorites button but it's toggiling all of them 
+// toggle = true;
+// status = 'Enable'; 
+
+// toggleButtonColor() {
+//     this.toggle = !this.toggle;
+//     this.status = this.toggle ? 'Enable' : 'Disable';
+// }
   
 
   
