@@ -1,4 +1,8 @@
-<div class="container">
+<div class="container" id="mobile-details">
+    <div id="mobile-details-header">
+        <button (click)="onCloseDetails()" id="mobile-close">Close Details</button>
+        <button>heart</button>
+    </div>
     <h1>{{movie.title}}</h1>
     <div class="star-container">
         <div class="stars-outer">
@@ -6,6 +10,26 @@
         </div>
     </div>
     <img [src]="movie.posterPath" alt="">
-    <div>{{movie.overview}}</div>
-    <button (click)="onCloseDetails()">Close Details</button>
+    <div id="overview">{{movie.overview}}</div>
+</div>
+
+<div class="container" id="web-details">
+    <div id="web-details-header">
+        <button (click)="onCloseDetails()" id="web-close">Close Details</button>
+        <button>heart</button>
+    </div>
+    <div id="web-details-inner">
+        <div id="web-poster">
+            <img [src]="movie.posterPath" alt="">
+        </div>
+        <div id="web-body">
+            <h1>{{movie.title}}</h1>
+            <div class="star-container">
+                <div class="stars-outer">
+                    <div class="stars-inner" [style]="starWidthStyle"></div>
+                </div>
+            </div>
+            <div id="overview">{{movie.overview}}</div>
+        </div>
+    </div>
 </div>
