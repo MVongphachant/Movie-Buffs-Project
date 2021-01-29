@@ -6,8 +6,11 @@
                     <img class="poster-image-pop-theater"
                     src="https://image.tmdb.org/t/p/original{{ movie.posterPath }}"alt="movie-poster-picture"/>
                 </a>
-                <div class="add-favorites-button">
-                    <button (click)="addMovie(movie)"><i class="fas fa-heart"></i></button>
+                <div class="movie-footer">
+                    <h3>Movie Title</h3>
+                    <div class="add-favorites-button">
+                        <i (click)="addMovie(movie)" class="fas fa-heart"></i>
+                    </div>
                 </div>
             </div>
     </div>

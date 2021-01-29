@@ -15,6 +15,22 @@
 .poster-image-pop-theater{
     height:250px;
     width:150px;
+    box-shadow: 5px 5px 5px gray;
+    margin: 10px;
+}
+
+.movie-footer {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10px;
+}
+
+h3 {
+    margin: 0 0 10px 0;
+    max-width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .add-favorites-button {

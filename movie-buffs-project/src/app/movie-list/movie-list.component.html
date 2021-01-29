@@ -1,5 +1,5 @@
 
-<div class="container">
+<div class="list-container">
     <div *ngFor="let movie of movieSearch">
         <div [routerLink]="['/movie-detail', movie.title, movie.poster_path, movie.vote_average, movie.overview]" class="wrapper">
             <div>{{movie.title}}</div>
