@@ -17,6 +17,7 @@ export class HomePageComponent implements OnInit {
     private watchlist: WatchlistService) { }
 
   ngOnInit(): void {
+    this.api.getMostPopResults();
 
     this.movies = this.api.movies;
   }
@@ -24,6 +25,7 @@ export class HomePageComponent implements OnInit {
   addMovie(movie){
     this.watchlist.addMovie(movie)
   }
+  
 
   
 
