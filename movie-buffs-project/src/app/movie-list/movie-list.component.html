@@ -1,7 +1,7 @@
 
 <div class="container">
     <div *ngFor="let movie of movieSearch">
-        <div [routerLink]="['/movie-detail', movie.title, movie.poster_path, movie.vote_average]" class="wrapper">
+        <div [routerLink]="['/movie-detail', movie.title, movie.poster_path, movie.vote_average, movie.overview]" class="wrapper">
             <div>{{movie.title}}</div>
             <img class="poster-image"
             src="https://image.tmdb.org/t/p/w1280{{ movie.poster_path }}"alt="movie-poster-picture"/>

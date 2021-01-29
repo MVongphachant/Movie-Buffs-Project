@@ -1,6 +1,6 @@
-<div>
-    <input type="text" placeholder="Enter Title Here" #query>
-    <button  (click)="showMovies(query.value)" [routerLink]="['/movie-list']">Show Movies</button>
+<div class = "search-container">
+    <div><input class = "title-search-input" type="text" placeholder="Enter Title Here" #query></div>
+    <div><button class="search-button"  (click)="showMovies(query.value)" [routerLink]="['/movie-list']">Find Me A Movie!</button></div>
 </div>
 <!-- <h3>Search by Popularity</h3>
 <button (click)="onGetLeastPop()">Least Popular</button> -->

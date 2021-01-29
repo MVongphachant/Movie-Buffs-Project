@@ -10,3 +10,12 @@
     justify-content: center;
     margin: 0px;
 }
+h1 {
+    display: flex;
+    align-items: center;
+    margin: 0px;
+}
+
+#title-icon{
+    color: #15616D;
+}

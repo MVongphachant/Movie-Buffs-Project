@@ -4,11 +4,16 @@
     margin: 10px;
 }
 
-.container {
+.search-container {
     display:flex;
-    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.wrapper{
-    width: 350px;
+.search-button {
+    margin: 0 5px 0 5px; 
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    background-color: #15616D;
+    color:white
 }
