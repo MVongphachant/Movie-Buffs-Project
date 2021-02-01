@@ -1,21 +1,20 @@
-<div style="display:flex;">
-    <button routerLink="/" routerLinkActive="active"><i class="far fa-window-close"></i></button>
-    <h1>Watchlist</h1>
-    <div *ngFor="let movie of watchlist" class="movie">
-        <div class="wrapper">
+<div class="watchlist-page">
+    <div class="top-left">
+        <button routerLink="/" routerLinkActive="active"><i class="far fa-window-close"></i></button>
+        <h1>Watchlist</h1>
+    </div>
 
-            <div>{{movie.title}}</div>
+    <div id="watchlist-container">
+        <div *ngFor="let movie of watchlist" class="movie">
+            <div class="wrapper">
 
-            <img class="poster-image"
-            src="https://image.tmdb.org/t/p/w1280{{ movie.poster_path }}" alt="movie-poster-picture"/>
+                <div id="title">{{movie.title}}</div>
 
-            <button (click)="removeMovie(movie)"><i class="fas fa-minus"></i></button>
+                <img class="poster-image"
+                src="https://image.tmdb.org/t/p/w1280{{ movie.poster_path }}" alt="movie-poster-picture"/>
+
+             <button (click)="removeMovie(movie)"><i class="fas fa-minus"></i></button>
+            </div>
         </div>
     </div>
 </div>
-<<<<<<< HEAD
-
-=======
-<button routerLink="/" routerLinkActive="active">Home</button>
->>>>>>> maddystyle
-
