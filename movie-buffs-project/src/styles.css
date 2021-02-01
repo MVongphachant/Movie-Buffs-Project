@@ -4,3 +4,9 @@ body {
     margin:0px;
     background-color: #ff7d00;
 }
+
+@media only screen and (min-width: 600px) {
+    body{
+        /* background-image: url(/src/assets/pexels-photo-257385.jpeg); */
+    }
+}
