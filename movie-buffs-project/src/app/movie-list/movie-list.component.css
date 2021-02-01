@@ -9,3 +9,47 @@ button {
     background-color: white;
     position: relative;
 }
+
+.container {
+    border: 1px solid grey;
+    border-radius: 7px;
+    padding: 5% 0px;
+    margin: 20px 3% ;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px 10px;
+    background-image: linear-gradient(to right, #001524, grey)
+}
+
+h2 {
+    text-align: center;
+    margin: 0px;
+}
+
+p {
+    text-align: center;
+}
+
+.movie-title {
+    font-weight: bold;
+    font-size: 18px;
+    margin-left: 2%;
+    margin-right: auto;
+    padding-bottom: 5px;
+    color: #ffecd1;
+    border-bottom: 1px solid#ffecd1;
+}
+
+.home-btn {
+    border: 1px solid black;
+    border-radius: 7px;
+    margin-left: 5%;
+}
+
+.alt-color {
+    background-image: linear-gradient(to right, grey, #001524);
+}
