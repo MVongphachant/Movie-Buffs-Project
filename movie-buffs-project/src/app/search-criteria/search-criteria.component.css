@@ -28,3 +28,13 @@
 .search-button:hover {
     background-color: #ff7d00;
 }
+@media only screen and (min-width: 600px) {
+    .search-container{
+        justify-content: flex-end;
+        width: auto;
+        position: fixed;
+        top:0;
+        right:0;
+        margin-top: 10px;
+    }
+}

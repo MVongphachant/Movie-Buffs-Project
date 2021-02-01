@@ -20,7 +20,6 @@ export class MovieListComponent implements OnInit {
     // this.movies = this.api.movies;
     this.moviesService.setMovieSearch.subscribe(data => this.movieSearch = data)
   }
-
   addMovie(movie){
     this.watchlistService.addMovie(movie)
   }

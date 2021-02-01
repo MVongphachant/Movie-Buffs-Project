@@ -12,7 +12,6 @@ import { WatchlistService } from '../services/watchlist.service';
 export class HomePageComponent implements OnInit {
   movies: Movie[] = [];
 
-  noPoster: string = '/src/app/assets/No-Photo-Available.png';
 
   constructor(private api: ApiService,
     private moviesService: MoviesService,
@@ -28,33 +27,4 @@ export class HomePageComponent implements OnInit {
   addMovie(movie){
     this.watchlist.addMovie(movie)
   }
-  
-
-//trying to toggle the color of the favorites button but it's toggiling all of them 
-// toggle = true;
-// status = 'Enable'; 
-
-// toggleButtonColor() {
-//     this.toggle = !this.toggle;
-//     this.status = this.toggle ? 'Enable' : 'Disable';
-// }
-  
-
-  
-
-  // onPageUpMost() {
-  //   this.api.pageUpMostPopResults();
-  // }
-
-  // onPageDownMost() {
-  //   this.api.pageDownMostPopResults();
-  // }
-
-  // onPageUpLeast() {
-  //   this.api.pageUpLeastPopResults();
-  // }
-
-  // onPageDownLeast() {
-  //   this.api.pageDownLeastPopResults();
-  // }
-  }
+}

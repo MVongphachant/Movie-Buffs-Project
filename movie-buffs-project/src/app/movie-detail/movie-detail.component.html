@@ -5,7 +5,7 @@
             <div class="stars-inner" [style]="starWidthStyle"></div>
         </div>
     </div>
-    <img [src]="movie.posterPath" alt="">
+    <img [src]="movie.posterPath" alt="movie-poster" onerror="this.src='assets/1554490-200.png'">
     <div>{{movie.overview}}</div>
     <button (click)="onCloseDetails()">Close Details</button>
 </div>
