@@ -26,6 +26,7 @@ starWidthStyle: string = "";
       rating: this.route.snapshot.params['rating'],
       overview: this.route.snapshot.params['overview']
     }
+    console.log(this.movie)
     
     const starTotal = 5;
     const starPercentage = (this.movie.rating / 2 / starTotal) * 100;

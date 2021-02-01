@@ -1,11 +1,14 @@
 
-<div class="list-container">
-    <div *ngFor="let movie of movieSearch">
-        <div [routerLink]="['/movie-detail', movie.title, movie.poster_path, movie.vote_average, movie.overview]" class="wrapper">
-            <div>{{movie.title}}</div>
+<div class="container">
+    <button class="home-btn" (click)="navHome()"><i class="fas fa-times"></i></button>
+    <h2>Search Results</h2>
+    <p>Click on the title to see more information</p>
+    <div *ngFor="let movie of movieSearch, let i = index">
+        <div [routerLink]="['/movie-detail', movie.title, movie.poster_path, movie.vote_average, movie.overview]" class="wrapper" [ngClass]="{'alt-color': i % 2 === 0} ">            
             <img class="poster-image"
             src="https://image.tmdb.org/t/p/w1280{{ movie.poster_path }}"alt="movie-poster-picture"/>
-        </div>
-        <button (click)="addMovie(movie)"><i class="fas fa-heart"></i></button>
+            <div class="movie-title">{{movie.title}}</div>
+            <button (click)="addMovie(movie)"><i class="fas fa-heart"></i></button>
+        </div>      
     </div>
 </div>

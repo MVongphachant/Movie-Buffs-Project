@@ -3,6 +3,7 @@ import { Movie } from '../models/movie.model';
 import { ApiService } from '../services/api.service';
 import { MoviesService } from '../services/movies.service';
 import { WatchlistService } from '../services/watchlist.service'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-movie-list',
@@ -14,7 +15,9 @@ export class MovieListComponent implements OnInit {
   movieSearch = [];
 
   constructor(private api: ApiService,
-              private moviesService: MoviesService, private watchlistService: WatchlistService) { }
+              private moviesService: MoviesService, 
+              private watchlistService: WatchlistService,
+              private router: Router) { }
 
   ngOnInit() {
     // this.movies = this.api.movies;
@@ -23,5 +26,9 @@ export class MovieListComponent implements OnInit {
 
   addMovie(movie){
     this.watchlistService.addMovie(movie)
+  }
+
+  navHome() {
+    this.router.navigate(['/']);
   }
 }
