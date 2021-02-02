@@ -2,7 +2,7 @@
 img {
     width: 100px;
     height: 150px;
-    box-shadow: 5px 5px 5px gray;
+    box-shadow: 5px 5px 5px #001524;
 }
 
 button {
@@ -13,7 +13,7 @@ button {
 }
 
 .container {
-    border: 1px solid grey;
+    border: 1px solid #001524;
     border-radius: 7px;
     padding: 5% 0px;
     margin: 20px 3% ;
@@ -24,16 +24,19 @@ button {
     align-items: center;
     cursor: pointer;
     padding: 10px 10px;
-    background-image: linear-gradient(to right, #001524, grey)
+    background-image: linear-gradient(to bottom, #15616d, #ff7d00)
 }
 
 h2 {
     text-align: center;
     margin: 0px;
+    color: #001524;
 }
 
 p {
     text-align: center;
+    color: #001524;
+    font-weight: bolder;
 }
 
 .movie-title {
@@ -47,11 +50,11 @@ p {
 }
 
 .home-btn {
-    border: 1px solid black;
+    border: 1px solid #001524;
     border-radius: 7px;
     margin-left: 5%;
 }
 
 .alt-color {
-    background-image: linear-gradient(to right, grey, #001524);
+    background-image: linear-gradient(to top, #ff7d00, #78290f);
 }

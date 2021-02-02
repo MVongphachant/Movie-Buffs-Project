@@ -2,7 +2,11 @@
 body {
     font-family: 'Quicksand', sans-serif;
     margin:0px;
-    background-color: #ff7d00;
+    background-color: #FF7D00;
+    background-image: url("/assets/ticket\ stub\ pic\ 2.png");
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-position: 0px 0px;
 }
 
 @media only screen and (min-width: 600px) {
