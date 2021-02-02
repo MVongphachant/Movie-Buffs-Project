@@ -21,6 +21,7 @@ export interface MovieDetailsObject {
     overview: string;
     release_date: string;
     show_details?: boolean;
+    posterPath: string
 }
 
 export interface SearchCriteriaInterface {
