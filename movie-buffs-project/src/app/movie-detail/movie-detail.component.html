@@ -1,7 +1,7 @@
 <div class="container" id="mobile-details">
     <div id="mobile-details-header">
-        <button (click)="onCloseDetails()" id="mobile-close">Close Details</button>
-        <button>heart</button>
+        <i class="far fa-window-close fa-2x" (click)="onCloseDetails()"></i>
+        <i class="fas fa-heart fa-2x" (click)="addMovie(movie)"></i>
     </div>
     <h1>{{movie.title}}</h1>
     <div class="star-container">
@@ -9,18 +9,18 @@
             <div class="stars-inner" [style]="starWidthStyle"></div>
         </div>
     </div>
-    <img [src]="movie.posterPath" alt="">
+    <img [src]="movie.posterPath" alt="" onerror="this.src='assets/1554490-200.png'">
     <div id="overview">{{movie.overview}}</div>
 </div>
 
 <div class="container" id="web-details">
     <div id="web-details-header">
-        <button (click)="onCloseDetails()" id="web-close">Close Details</button>
-        <button>heart</button>
+        <i class="far fa-window-close fa-2x" (click)="onCloseDetails()"></i>
+        <i class="fas fa-heart fa-2x" (click)="addMovie(movie)"></i>
     </div>
     <div id="web-details-inner">
         <div id="web-poster">
-            <img [src]="movie.posterPath" alt="">
+            <img [src]="movie.posterPath" alt="" onerror="this.src='assets/1554490-200.png'">
         </div>
         <div id="web-body">
             <h1>{{movie.title}}</h1>

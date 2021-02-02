@@ -10,8 +10,13 @@
 
                 <div id="title">{{movie.title}}</div>
 
-                <img class="poster-image"
-                src="https://image.tmdb.org/t/p/w1280{{ movie.poster_path }}" alt="movie-poster-picture"/>
+                <img class="poster-image" *ngIf="movie.poster_path"
+                src="https://image.tmdb.org/t/p/w1280{{ movie.poster_path }}" alt="movie-poster-picture"
+                onerror="this.src='assets/1554490-200.png'"/>
+
+                <img class="poster-image" *ngIf="movie.posterPath"
+                src="https://image.tmdb.org/t/p/w1280{{ movie.posterPath }}" alt="movie-poster-picture"
+                onerror="this.src='assets/1554490-200.png'"/>
 
              <button (click)="removeMovie(movie)"><i class="fas fa-minus"></i></button>
             </div>

@@ -25,6 +25,6 @@ export class HomePageComponent implements OnInit {
   }
 
   addMovie(movie){
-    this.watchlist.addMovie(movie)
+    this.watchlist.addMovie(movie);
   }
 }

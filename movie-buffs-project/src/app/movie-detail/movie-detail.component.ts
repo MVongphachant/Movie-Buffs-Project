@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Movie } from '../models/movie.model';
 import { ApiService } from '../services/api.service';
+import { WatchlistService } from '../services/watchlist.service';
 
 @Component({
   selector: 'app-movie-detail',
@@ -15,7 +16,8 @@ starWidthStyle: string = "";
 
   constructor(private route: ActivatedRoute, 
               private router: Router,
-              private api: ApiService) { }
+              private api: ApiService,
+              private watchlistService: WatchlistService) { }
 
   ngOnInit() {
     this.movie = {
@@ -39,6 +41,10 @@ starWidthStyle: string = "";
 
   onCloseDetails() {
     this.router.navigate(['/'])
+  }
+
+  addMovie(movie){
+    this.watchlistService.addMovie(movie)
   }
 
 }
