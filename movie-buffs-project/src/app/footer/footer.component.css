@@ -18,7 +18,7 @@
     .footer-container {
         justify-content: flex-end;
     }
-    #popular-container, #in-theaters-container, #favorite-container{
-        padding: 20px;
+    .popular-container, .in-theaters-container, .favorite-container{
+        margin: 0px 5px;
     }
 }
