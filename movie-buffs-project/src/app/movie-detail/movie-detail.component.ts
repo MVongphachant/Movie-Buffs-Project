@@ -24,7 +24,7 @@ starWidthStyle: string = "";
       id: this.route.snapshot.params['id'],
       title: this.route.snapshot.params['title'],
       releaseDate: this.route.snapshot.params['release-date'],
-      posterPath: this.api.posterPathUrl + this.route.snapshot.params['poster-path'],
+      posterPath: this.route.snapshot.params['poster-path'],
       rating: this.route.snapshot.params['rating'],
       overview: this.route.snapshot.params['overview']
     }

@@ -11,7 +11,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { MovieDetailComponent } from './movie-detail/movie-detail.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormsModule } from '@angular/forms';
-import { TooltipModule} from 'ng2-tooltip-directive';
+// import { TooltipModule} from 'ng2-tooltip-directive';
 
 @NgModule({
   declarations: [
@@ -28,7 +28,7 @@ import { TooltipModule} from 'ng2-tooltip-directive';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    TooltipModule,
+    // TooltipModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

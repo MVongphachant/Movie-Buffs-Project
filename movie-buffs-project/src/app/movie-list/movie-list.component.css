@@ -61,3 +61,7 @@ p {
 #fav-btn:hover {
     color: #ffecd1;
 }
+
+i {
+    cursor: pointer;
+}

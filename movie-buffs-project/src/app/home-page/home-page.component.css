@@ -51,6 +51,10 @@ h3 {
     color: #ffecd1;
 }
 
+i {
+    cursor: pointer;
+}
+
 @media only screen and (min-width: 600px) {
     .pop-theater-container{
         height: 680px;

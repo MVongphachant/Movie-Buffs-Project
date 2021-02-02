@@ -14,6 +14,10 @@
     justify-content: center;
 }
 
+i {
+    cursor: pointer;
+}
+
 @media only screen and (min-width: 600px) {
     .footer-container {
         justify-content: flex-end;
