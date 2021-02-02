@@ -3,6 +3,8 @@
     justify-content: center;
     margin: 0px;
     padding: 0px;
+    background-color:#78290F;
+    color:white;
 }
 
 .welcome-message{
@@ -16,6 +18,11 @@ h1 {
     margin: 0px;
 }
 
-#title-icon{
-    color: #15616D;
+@media only screen and (min-width: 600px) {
+    .header-container {
+        justify-content: flex-start;
+        width: auto;
+        align-items: center;
+        padding-left: 5px;
+    }
 }

@@ -1,12 +1,21 @@
 .footer-container {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: white;
+    height: auto;
+    background-color: #78290F;
+    color: white;
 }
 #popular-button, #theater-button, #favorites-button{
     display: flex;
     justify-content: center;
+}
+
+@media only screen and (min-width: 600px) {
+    .footer-container {
+        justify-content: flex-end;
+    }
 }

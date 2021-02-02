@@ -6,7 +6,8 @@
     <div *ngFor="let movie of movieSearch, let i = index">
         <div [routerLink]="['/movie-detail', movie.title, movie.poster_path, movie.vote_average, movie.overview]" class="wrapper" [ngClass]="{'alt-color': i % 2 === 0} ">            
             <img class="poster-image"
-            src="https://image.tmdb.org/t/p/w1280{{ movie.poster_path }}"alt="movie-poster-picture"/>
+            src="https://image.tmdb.org/t/p/w1280{{ movie.poster_path }}"alt="movie-poster-picture"
+            onerror="this.src='assets/1554490-200.png'"/>
             <div class="movie-title">{{movie.title}}</div>
             <button (click)="addMovie(movie)"><i class="fas fa-heart"></i></button>
         </div>      

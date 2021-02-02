@@ -12,6 +12,7 @@ import { WatchlistService } from '../services/watchlist.service';
 export class HomePageComponent implements OnInit {
   movies: Movie[] = [];
 
+
   constructor(private api: ApiService,
     private moviesService: MoviesService,
     private watchlist: WatchlistService) { }
@@ -20,28 +21,10 @@ export class HomePageComponent implements OnInit {
     this.api.getMostPopResults();
 
     this.movies = this.api.movies;
+
   }
 
   addMovie(movie){
     this.watchlist.addMovie(movie)
   }
-  
-
-  
-
-  // onPageUpMost() {
-  //   this.api.pageUpMostPopResults();
-  // }
-
-  // onPageDownMost() {
-  //   this.api.pageDownMostPopResults();
-  // }
-
-  // onPageUpLeast() {
-  //   this.api.pageUpLeastPopResults();
-  // }
-
-  // onPageDownLeast() {
-  //   this.api.pageDownLeastPopResults();
-  // }
-  }
+}
