@@ -7,7 +7,7 @@
     width: 100%;
     height: auto;
     background-color: #78290F;
-    color: white;
+    color: #ffecd1;
 }
 #popular-button, #theater-button, #favorites-button{
     display: flex;
