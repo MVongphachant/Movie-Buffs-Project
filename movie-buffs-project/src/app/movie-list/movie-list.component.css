@@ -58,3 +58,6 @@ p {
 .alt-color {
     background-image: linear-gradient(to top, #ff7d00, #78290f);
 }
+#fav-btn:hover {
+    color: #ffecd1;
+}
