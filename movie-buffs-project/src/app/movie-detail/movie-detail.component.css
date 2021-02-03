@@ -17,6 +17,9 @@
     width: 100%;
     margin: 10px 0 0 0;
 }
+.fa-heart:hover{
+  color: #ffecd1;
+}
 
 h1 {
     margin: 5px;
