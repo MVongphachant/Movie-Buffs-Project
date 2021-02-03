@@ -47,12 +47,15 @@ p {
     padding-bottom: 5px;
     color: #ffecd1;
     border-bottom: 1px solid#ffecd1;
+    outline: none; 
 }
 
 .home-btn {
     border: 1px solid #001524;
     border-radius: 7px;
     margin-left: 5%;
+    outline: none; 
+    background-color: transparent;
 }
 
 .alt-color {

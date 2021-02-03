@@ -12,6 +12,7 @@
 #popular-button, #theater-button, #favorites-button{
     display: flex;
     justify-content: center;
+    outline: none;
 }
 
 i {

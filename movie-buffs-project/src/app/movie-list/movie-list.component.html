@@ -5,10 +5,10 @@
     <p>Click on the title to see more information</p>
     <div *ngFor="let movie of movieSearch, let i = index">
         <div class="wrapper" [ngClass]="{'alt-color': i % 2 === 0} ">            
-            <img [routerLink]="['/movie-detail', movie.title, movie.poster_path, movie.vote_average, movie.overview]" class="poster-image"
+            <img class="poster-image"
             src="https://image.tmdb.org/t/p/w1280{{ movie.poster_path }}"alt="movie-poster-picture"
             onerror="this.src='assets/1554490-200.png'"/>
-            <div class="movie-title">{{movie.title}}</div>
+            <div [routerLink]="['/movie-detail', movie.title, movie.poster_path, movie.vote_average, movie.overview]" class="movie-title">{{movie.title}}</div>
             <div class="fav-btn"><i class="fas fa-heart fa-2x" id="fav-btn" (click)="addMovie(movie)"></i></div>
         </div>
     </div>

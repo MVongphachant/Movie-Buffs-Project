@@ -34,6 +34,7 @@ button {
     background-color: #001524;
     color: #ffecd1;
     text-align: end;
+    outline: none;
 }
 
 #watchlist-container {
@@ -57,6 +58,7 @@ div {
 .fas.fa-minus {
     position: relative;
     top: -75px;
+    outline: none;
 }
 
 #title {
