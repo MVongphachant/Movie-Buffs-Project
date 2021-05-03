@@ -1,10 +1,3 @@
-export interface ApiResponse {
-    page: number;
-    total_results: number;
-    total_pages: number;
-    results: MovieDetailsObject[];
-}
-
 export interface MovieDetailsObject {
     popularity: number;
     vote_count: number;
@@ -22,10 +15,4 @@ export interface MovieDetailsObject {
     release_date: string;
     show_details?: boolean;
     posterPath: string
-}
-
-export interface SearchCriteriaInterface {
-    year: number;
-    genre: number;
-    rating: number;
 }

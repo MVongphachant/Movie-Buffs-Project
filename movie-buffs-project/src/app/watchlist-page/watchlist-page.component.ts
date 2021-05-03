@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { WatchlistService } from '../services/watchlist.service'
-import { MovieDetailsObject } from '../services/api-response'
+import { MovieDetailsObject } from '../models/api-response'
 
 
 @Component({
