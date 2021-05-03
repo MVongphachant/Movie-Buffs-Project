@@ -24,8 +24,8 @@ import { TooltipModule } from 'ng2-tooltip-directive';
     FooterComponent
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
+    BrowserModule,
     HttpClientModule,
     FormsModule,
     TooltipModule,

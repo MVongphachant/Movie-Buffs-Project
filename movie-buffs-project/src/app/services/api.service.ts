@@ -36,7 +36,7 @@ export class ApiService {
       return responseArray;
     }))
       .subscribe(data => {
-        data.forEach(object => {
+        data.forEach (object => {
           const movieObj = {
             id: object.id, 
             title: object.title,
@@ -74,131 +74,6 @@ export class ApiService {
           this.movies.push(movieObj);
         })
       })
-  }
-
-  // getLeastPopResults() {
-  //   this.clearMovies();
-  //   return this.http.get(`${this.popularityApiUrl}&primary_release_date.gte=2014-09-15&primary_release_date.lte=2014-10-22`).pipe(map(responseData => {
-  //     const responseArray = [];
-  //     for (let i in responseData) {
-  //       responseArray.push(responseData[i])
-  //     }
-  //     return responseArray;
-  //   }))
-  //     .subscribe(data => {
-  //       data[1].forEach(object => {
-  //         const movieObj = {
-  //           id: object.id, 
-  //           title: object.title,
-  //           releaseDate: object.release_date,
-  //           posterPath: object.poster_path,
-  //           rating: object.vote_average
-  //         };
-  //         this.movies.push(movieObj);
-  //       })
-  //     })
-  // }
-
-  // pageUpMostPopResults() {
-  //   this.clearMovies();
-  //   this.pageCounter++;
-  //   return this.http.get(`${this.popularityApiUrl}&sort_by=popularity.desc&page=${this.pageCounter}`).pipe(map(responseData => {
-  //     let responseArray = [];
-  //     for (let i in responseData) {
-  //       responseArray.push(responseData[i])
-  //     }
-  //     responseArray = responseArray[1];
-  //     return responseArray;
-  //   }))
-  //     .subscribe(data => {
-  //       data.forEach(object => {
-  //         const movieObj = {
-  //           id: object.id, 
-  //           title: object.title,
-  //           releaseDate: object.release_date,
-  //           posterPath: object.poster_path,
-  //           rating: object.vote_average
-  //         };
-  //         this.movies.push(movieObj);
-  //       })
-  //     })
-  // }
-
-  // pageDownMostPopResults() {
-  //   this.clearMovies();
-  //   if (this.pageCounter > 1) {
-  //     this.pageCounter--;
-  //   }
-  //   return this.http.get(`${this.popularityApiUrl}&sort_by=popularity.desc&page=${this.pageCounter}`).pipe(map(responseData => {
-  //     let responseArray = [];
-  //     for (let i in responseData) {
-  //       responseArray.push(responseData[i])
-  //     }
-  //     responseArray = responseArray[1];
-  //     return responseArray;
-  //   }))
-  //     .subscribe(data => {
-  //       data.forEach(object => {
-  //         const movieObj = {
-  //           id: object.id, 
-  //           title: object.title,
-  //           releaseDate: object.release_date,
-  //           posterPath: object.poster_path,
-  //           rating: object.vote_average
-  //         };
-  //         this.movies.push(movieObj);
-  //       })
-  //     })
-  // }
-
-  // pageUpLeastPopResults() {
-  //   this.clearMovies();
-  //   this.pageCounter++;
-  //   return this.http.get(`${this.popularityApiUrl}&sort_by=popularity.asc&page=${this.pageCounter}`).pipe(map(responseData => {
-  //     const responseArray = [];
-  //     for (let i in responseData) {
-  //       responseArray.push(responseData[i])
-  //     }
-  //     return responseArray;
-  //   }))
-  //     .subscribe(data => {
-  //       data[1].forEach(object => {
-  //         const movieObj = {
-  //           id: object.id, 
-  //           title: object.title,
-  //           releaseDate: object.release_date,
-  //           posterPath: object.poster_path,
-  //           rating: object.vote_average
-  //         };
-  //         this.movies.push(movieObj);
-  //       })
-  //     })
-  // }
-
-  // pageDownLeastPopResults() {
-  //   this.clearMovies();
-  //   if (this.pageCounter > 1) {
-  //     this.pageCounter--;
-  //   }
-  //   return this.http.get(`${this.popularityApiUrl}&sort_by=popularity.asc&page=${this.pageCounter}`).pipe(map(responseData => {
-  //     const responseArray = [];
-  //     for (let i in responseData) {
-  //       responseArray.push(responseData[i])
-  //     }
-  //     return responseArray;
-  //   }))
-  //     .subscribe(data => {
-  //       data[1].forEach(object => {
-  //         const movieObj = {
-  //           id: object.id, 
-  //           title: object.title,
-  //           releaseDate: object.release_date,
-  //           posterPath: object.poster_path,
-  //           rating: object.vote_average
-  //         };
-  //         this.movies.push(movieObj);
-  //       })
-  //     })
-  // }
+  }  
   
 }
